@@ -64,8 +64,14 @@ function setUpModeButtons() {
 
             //figure out how many squares to show using ternary operator (condición ? expr1 : expr2)
             // same as doing an if else statement.
-            this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-
+            if(this.textContent === "Easy") {
+                numSquares = 3;
+            } else if (this.textContent === "Medium"){
+                numSquares = 6;
+            } else {
+                numSquares = 9;
+            }
+            
             Game();
         });
     }
